@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/update"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/updateTitle"
+        android:background="@drawable/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="请输入动态标题"
+        android:gravity="start|center_vertical"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/updateContent"
+        android:background="@drawable/style_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:hint="请输入动态内容"
+        android:gravity="start"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/select"
+        android:background="@drawable/style_edittext"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:text="点击上方选择封面"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel"
+            android:background="@drawable/style_button_white"
+            android:textColor="@color/red"
+            android:text="@string/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit"
+            android:background="@drawable/style_button"
+            android:textColor="@color/white"
+            android:text="@string/submit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

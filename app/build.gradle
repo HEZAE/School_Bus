@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.google.android'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.google.android"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "2.0.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-radar:2.0.5'       //雷达刷新头
+    implementation  'io.github.scwang90:refresh-footer-ball:2.0.5'        //球脉冲加载
+
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    //高德3D地图so及jar
+    implementation 'com.amap.api:3dmap:9.6.0'
+    //权限管理
+    implementation 'com.guolindev.permissionx:permissionx:1.7.1'
+    //网络请求依赖 okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    //Json解析依赖 gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+    //数据库依赖 litepal
+    implementation 'org.litepal.guolindev:core:3.2.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.0'
+    //图片选择器
+    implementation 'io.github.lucksiege:pictureselector:v3.10.7'
+    //图片压缩
+    implementation 'io.github.lucksiege:compress:v3.10.7'
+    //弹窗库
+    implementation "com.github.kongzue.DialogX:DialogX:0.0.47.beta19"
+    implementation 'org.greenrobot:eventbus:3.3.1'
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(path: ':base')
+
+    implementation 'com.blankj:utilcodex:1.30.6'
+
+
+}

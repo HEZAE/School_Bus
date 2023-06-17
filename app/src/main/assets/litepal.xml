@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="user" />
+    <version value="1" />
+    <list>
+        <mapping class="com.google.android.ui.mine.bean.UserBean"/>
+        <mapping class="com.google.android.ui.mine.bean.DriverBean"/>
+    </list>
+</litepal>
